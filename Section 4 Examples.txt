@@ -1,0 +1,85 @@
+While - Counting digits in a number
+
+Start
+
+num = 0
+digits = 0
+READ num
+WHILE num>0
+   num = num/10
+   digits = digits + 1
+end WHILE
+PRINT digits
+
+Stop
+
+Do While - Keep track of odd and even count until user inputs 0
+
+Start
+
+INPUT num
+evencount = 0
+oddcount = 0
+
+WHILE num != 0
+    READ num
+    IF num % 2 = 0 then
+        evencount = evencount + 1
+    ELSE
+	oddcount = oddcount + 1
+    INPUT num
+
+PRINT oddcount
+PRINT evencount
+
+Stop
+
+For - print hello 10 times
+
+Start
+
+count = 1
+FOR count 1 to count 10 incriment by 1
+   PRINT "Hello"
+
+Stop
+
+Jump Statements
+
+Break -Add products to your cart until it reaches value of 10,000
+
+Start
+
+cartvalue = 0
+WHILE True
+    READ price
+    cartvalue = cartvalue + price
+    IF cartvalue > 10000 then
+        break
+PRINT cartvalue
+
+Stop
+
+Continue - Add products if the value is less then 10,000 until you choose to stop 
+
+Start
+
+cartvalue = 0
+choice = "y"
+WHILE choice = "y"
+    READ price
+
+    if price > 10000 then
+        continue
+
+    cartvalue = cartvalue + price
+    PRINT "Do you want to continue?"
+    Read choice
+
+PRINT cartvalue
+
+Stop
+
+
+
+
