@@ -1,0 +1,117 @@
+take_bet
+INPUT chips_bet
+WHILE chips_bet > player_total
+    PRINT "Chips cannot exceed total"
+    INPUT chips_bet
+
+PRINT "you can now start playing"
+
+stop
+
+- - - - - - - - - -
+
+stand
+
+PRINT "Player stands"
+IF player_chips > 21
+    CALL end_program
+ELSE
+    CALL dealer_hit
+
+stop
+
+- - - - - - - - - -
+
+player_hit
+
+new_card = deck.pop()
+new_card_value = new_card.value
+
+IF hand_value > 21
+    PRINT "You can't hit anymore!"
+ELSE
+    hand = hand + new_card
+
+stop
+
+- - - - - - - - - -
+
+dealer_hit
+
+WHILE dealer_hand > 17
+    new_card = deck.pop()
+    new_card_value = new_card.value
+
+CALL end_program
+
+- - - - - - - - - -
+
+end_program
+IF player_hand > 21
+    player_chips = player_chips - player_bet
+    PRINT "Player busts!"
+ELSE
+    IF dealer_hand > 21
+        player_chips = player_chips + player_bet
+	PRINT "Dealer busts!"
+    ELSE
+        IF player_hand > dealer_hand
+            player_chips = player_chips + player_bet
+	    PRINT "Player wins!"
+	ELSE
+	    IF player_hand < dealer_hand
+		player_chips = player_chips - player_bet
+		PRINT "Player loses!"
+	    ELSE
+		PRINT "it's a draw!"
+
+stop
+    
+- - - - - - - - - -
+
+start
+playing = True
+
+WHILE playing = TRUE
+    CALL take_bet
+    PRINT "Do you want to hit or stand?"
+    IF input = "h"
+        CALL player_hit
+        PRINT "Do you want to hit or stand?"
+    ELSE
+       CALL stand
+
+    PRINT "Would you like to play again?"
+    IF input = "y"
+	playing = True
+    ELSE
+        playing = False
+
+PRINT "Thanks for playing!"
+
+stop
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
