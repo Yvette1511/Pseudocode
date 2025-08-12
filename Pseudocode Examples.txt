@@ -1,0 +1,60 @@
+Sequence - Display average and total marks of 3 subjects
+
+Start
+PRINT "Enter Marks for C, C++ and Java"
+READ C, CPP, Java
+Total = C + CPP + Java
+Average = Total/3
+PRINT Total
+PRINT Average
+Stop
+
+Selection - Check whether inputted value is even or odd
+
+Start
+PRINT "Enter a number"
+READ num
+IF num % 2 = 0 then
+   PRINT "Even number"
+ELSE
+   PRINT "Odd number"
+end IF
+Stop
+
+Selection - Read numbers. If it's between 1 to 100 display welcome, otherwise print goodbye
+
+Start
+PRINT "Enter a number from 1 to 100"
+INPUT num
+IF num>=1 AND num<=100 go to step 5 otherwise go to 6
+5) PRINT "Welcome"
+6) PRINT "Goodbye"
+stop
+
+Loops - Program to display even numbers up to 100
+
+Start
+num=2
+3) PRINT num
+num = num + 2
+IF num <= 100 go to step 3
+Stop
+
+Functions - Calculate the square root using functions
+(assume the function has been declared before)
+
+Start
+INPUT "enter a number"
+READ num
+result = CALL squareroot(num)
+PRINT "Result - ", result
+Stop
+
+
+
+
+
+
+
+
+
